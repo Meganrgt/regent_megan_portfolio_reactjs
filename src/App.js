@@ -12,12 +12,12 @@ class App extends React.Component {
       <div className="App">
         <header>
           <nav className="navbar navbar-expand-lg bg-body-tertiary">
-            <div className="container-fluid">
-              <Link data-bs-toggle="modal" data-bs-target="#ModaleProfil">John Doe</Link>
+            <div className="container-fluid row">
+              <Link className="col-md-4" data-bs-toggle="modal" data-bs-target="#ModaleProfil">John Doe</Link>
               <button className="navbar-toggler">
                 <span className="navbar-toggler-icon"></span>
               </button>
-              <div className="collapse navbar-collapse" id="navbarNavAltMarkup">
+              <div className="collapse navbar-collapse col-md-8" id="navbarNavAltMarkup">
                 <div className="navbar-nav">
                   <Link className="nav-link" to="/">Home</Link>
                   <Link className="nav-link" to="/services">Services</Link>
@@ -46,7 +46,6 @@ class App extends React.Component {
             </div>
           </div>
         </div>
-        
         <Routes>
           <Route path="/" element={<Home />}></Route>
           <Route path="/services" element={<Services />}></Route>
@@ -54,6 +53,65 @@ class App extends React.Component {
           <Route path="/contact" element={<Contact />}></Route>
           <Route path="/mentions" element={<Mentions />}></Route>
         </Routes>
+        <footer>
+          <nav className="navbar navbar-expand-lg bg-body-tertiary row">
+            <div className="col-md-4">
+              <h4>John Doe</h4>
+              <address>
+                <p>40 rue Laure Diebol</p>
+                <p>69009 Lyon, France</p>
+                <p><Link to="tel:1020304050">10 20 30 40 50</Link></p>
+                <p><Link to="mailto:john.doe@gmail.com">john.doe@gmail.com</Link></p>
+                <Link data-mdb-ripple-init className="btn btn-link btn-floating btn-lg text-body m-1" to="#!" role="button" data-mdb-ripple-color="dark"><i className="bi bi-github"></i></Link>
+                <Link data-mdb-ripple-init className="btn btn-link btn-floating btn-lg text-body m-1" to="#!!" role="button" data-mdb-ripple-color="dark"><i className="bi bi-twitter"></i></Link>
+                <Link data-mdb-ripple-init className="btn btn-link btn-floating btn-lg text-body m-1" to="#!!!" role="button" data-mdb-ripple-color="dark"><i className="bi bi-linkedin"></i></Link>
+              </address>
+            </div>
+            <div className="col-md-4">
+              <h4>Liens utiles</h4>
+              <ul className="nav flex-column">
+                <li className="nav-item">
+                  <Link className="nav-link" to="/">Home</Link>
+                </li>
+                <li class="nav-item">
+                  <Link className="nav-link" to="/services">Services</Link>
+                </li>
+                <li class="nav-item">
+                  <Link className="nav-link" to="/portfolio">Portfolio</Link>
+                </li>
+                <li class="nav-item">
+                  <Link className="nav-link" to="/contact">Contact</Link>
+                </li>
+                <li class="nav-item">
+                  <Link className="nav-link" to="/mentions">Mentions Légales</Link>
+                </li>
+              </ul>
+            </div>
+            <div className="col-md-4">
+              <h4>Mes dernières réalisations</h4>
+              <ul className="nav flex-column">
+                <li className="nav-item">
+                  <Link className="nav-link" to="#">Fresh Food</Link>
+                </li>
+                <li class="nav-item">
+                  <Link className="nav-link" to="#">Restaurant Akira</Link>
+                </li>
+                <li class="nav-item">
+                  <Link className="nav-link" to="#">Espace bien-être</Link>
+                </li>
+                <li class="nav-item">
+                  <Link className="nav-link" to="#">SEO</Link>
+                </li>
+                <li class="nav-item">
+                  <Link className="nav-link" to="#">Création d'une API</Link>
+                </li>
+                <li class="nav-item">
+                  <Link className="nav-link" to="#">Maquette d'une site</Link>
+                </li>
+              </ul>
+            </div>
+          </nav>
+        </footer>
       </div>
     )
   }
