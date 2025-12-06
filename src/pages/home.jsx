@@ -1,12 +1,13 @@
 import Competence from "../components/competence";
 import Container from "../components/container";
 import ContainerColumn from "../components/container-column";
+import HeaderHP from "../components/header-hp";
 import H2Title from "../components/title-h2";
 
 const Home = () => {
     return (
         <><div>
-            <h1>Page Home</h1>
+            <HeaderHP name="John Doe" job="Developpeur full stack" />
         </div><Competence competenceName="test" competenceLevel="50%" barColor="progress-bar bg-success"/>
         <Container>
                 <ContainerColumn>
