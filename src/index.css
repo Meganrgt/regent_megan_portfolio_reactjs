@@ -34,3 +34,17 @@ h1 {
   padding: 30px;
   margin: auto;
 }
+
+main {
+  width: 80%;
+  margin: auto;
+}
+
+.service-block {
+  margin: 10px;
+  text-align: center;
+}
+
+.icontitle{
+  margin: 30px 0px;
+}
