@@ -15,4 +15,13 @@ code {
 hr {
   border: 2px solid blue;
   opacity: 1;
+  width: 30%;
+  margin: auto;
+}
+
+h1 {
+  text-align: center;
+}
+p {
+  text-align: center
 }
