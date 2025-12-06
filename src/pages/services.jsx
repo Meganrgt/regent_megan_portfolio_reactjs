@@ -1,8 +1,9 @@
+import H1Title from "../components/page-title";
 
 const Services = () => {
     return (
         <div>
-            <h1>Page Services</h1>
+            <H1Title title="Mon offre de service" description="Voici les prestations sur lesquelles je peux intervenir"/>
         </div>
     )
 }

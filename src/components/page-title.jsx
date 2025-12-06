@@ -1,4 +1,4 @@
-const PageTitle = (props) => {
+const H1Title = (props) => {
     return (
         <><h1>{props.title}</h1>
         <p>{props.description}</p>
@@ -6,4 +6,4 @@ const PageTitle = (props) => {
     );
 }
 
-export default PageTitle;
+export default H1Title;
