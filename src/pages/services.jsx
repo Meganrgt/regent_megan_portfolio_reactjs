@@ -1,9 +1,12 @@
+import HeaderStandard from "../components/header-standard";
 import H1Title from "../components/page-title";
 import ServiceBlock from "../components/service";
 
 const Services = () => {
     return (
         <div>
+            <img src="" alt="" />
+            <HeaderStandard />
             <H1Title title="Mon offre de service" description="Voici les prestations sur lesquelles je peux intervenir"/>
             <main>
                 <div className="row">
