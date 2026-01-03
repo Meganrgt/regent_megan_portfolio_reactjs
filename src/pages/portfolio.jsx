@@ -1,5 +1,6 @@
 import Card from "../components/card";
-import H1Title from "../components/page-title";
+import PageTitle from "../components/page-title";
+import HeaderStandard from "../components/header-standard";
 import ImageFreshFood from "../assets/images/portfolio/fresh-food.jpg";
 import ImageRestaurantJaponais from "../assets/images/portfolio/restaurant-japonais.jpg";
 import ImageBienEtre from "../assets/images/portfolio/espace-bien-etre.jpg";
@@ -11,8 +12,9 @@ import ImageScreens from "../assets/images/portfolio/screens.jpg";
 const Portfolio = () => {
     return (
         <div>
-            <H1Title title="Portfolio" description="Voici quelques-unes de mes réalisations"/>
-            <div className="row row-cols-md-3 g-4">
+            <HeaderStandard />
+            <PageTitle title="Portfolio" description="Voici quelques-unes de mes réalisations"/>
+            <div className="container row row-cols-md-3 g-4">
                 <Card imageLink={ImageFreshFood} cardTitle="Fresh Food" cardText="Site de vente de produit frais en ligne" cardFooter="Site réalisé avec PHP et MySQL" />
                 <Card imageLink={ImageRestaurantJaponais} cardTitle="Restaurant Akira" cardText="Site de vente de produit frais en ligne" cardFooter="Site réalisé avec Wordpress" />
                 <Card imageLink={ImageBienEtre} cardTitle="Espace bien-être" cardText="Site de vente de produit frais en ligne" cardFooter="Site réalisé avec LARAVEL" />
