@@ -10,7 +10,8 @@ const Accordion = (props) => {
         </h2>
         <div id={props.target} class="accordion-collapse collapse" data-bs-parent="#accordionExample">
           <div class="accordion-body">
-            {props.accordionBody}
+            <h2>{props.accordionBodyTitle}</h2>
+            {props.children}
           </div>
         </div>
       </div></>
