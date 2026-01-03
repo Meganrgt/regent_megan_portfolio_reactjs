@@ -5,6 +5,8 @@ import Portfolio from './pages/portfolio';
 import Services from './pages/services';
 import Contact from './pages/contact';
 import Mentions from "./pages/mentions";
+import JohnDoeProfile from "../src/assets/images/anonym.png";
+import ContactDetails from "./components/contact-details";
 
 class App extends React.Component {
   render() {
@@ -29,19 +31,34 @@ class App extends React.Component {
             </div>
           </nav>
         </header>
-        <div className="modal fade" id="ModaleProfil" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div className="modal fade modal-lg" id="ModaleProfil" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true" data-bs-theme="dark">
           <div className="modal-dialog">
             <div className="modal-content">
               <div className="modal-header">
-                <h1 className="modal-title fs-5" id="exampleModalLabel">Modal title</h1>
+                <h1 className="modal-title fs-5" id="exampleModalLabel">Mon profil GitHub</h1>
                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
               </div>
-              <div className="modal-body">
-                ...
+              <div className="modal-body row">
+                  <div className="col-sm-6">
+                    <img src={JohnDoeProfile} alt="Jonh Doe about" className="object-fit-contain" width="100%"/>
+                  </div>
+                  <div className="col-sm-6">
+                    <p><i class="bi bi-person"></i><a href="https://github.com/Meganrgt" > John Doe</a></p>
+                    <hr></hr>
+                    <ContactDetails icon="bi bi-geo-alt" details=""/>
+                    <hr></hr>
+                    <ContactDetails icon="bi bi-card-text" details=" As we all know, John Doe's identity is
+                    unknown. just wanted to contribute without being know"/>
+                    <hr></hr>
+                    <ContactDetails icon="bi bi-box" details=" Repositories : 1"/>
+                    <hr></hr>
+                    <ContactDetails icon="bi bi-people" details=" Followers : 16"/>
+                    <hr></hr>
+                    <ContactDetails icon="bi bi-people" details=" Following : 0"/>
+                  </div>
               </div>
               <div className="modal-footer">
-                <button type="button" className="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                <button type="button" className="btn btn-primary">Save changes</button>
+                <button type="button" className="btn btn-secondary" data-bs-dismiss="modal">Fermer</button>
               </div>
             </div>
           </div>
