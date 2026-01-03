@@ -53,7 +53,7 @@ class App extends React.Component {
           <Route path="/contact" element={<Contact />}></Route>
           <Route path="/mentions" element={<Mentions />}></Route>
         </Routes>
-        <footer>
+        <footer className="mt-5">
           <nav className="navbar navbar-expand-lg bg-body-tertiary row align-items-start" data-bs-theme="dark">
             <div className="col-md-4 ps-5">
               <h4>John Doe</h4>
