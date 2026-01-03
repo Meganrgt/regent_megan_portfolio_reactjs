@@ -1,6 +1,6 @@
 const Container = ({children}) => {
     return (
-        <><div className="container rounded shadow row mt-5 mb-5">
+        <><div className="container rounded shadow row mb-5 pt-3 pb-3">
             {children}
             </div></>
     );
