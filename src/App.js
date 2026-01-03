@@ -11,20 +11,20 @@ class App extends React.Component {
     return(
       <div className="App">
         <header>
-          <nav className="navbar navbar-expand-lg bg-body-tertiary">
+          <nav className="navbar navbar-expand-md bg-body-tertiary " data-bs-theme="dark">
             <div className="container-fluid row">
-              <Link className="col-md-4" data-bs-toggle="modal" data-bs-target="#ModaleProfil">John Doe</Link>
-              <button className="navbar-toggler">
+              <Link className="col-md-4" data-bs-toggle="modal" data-bs-target="#ModaleProfil">JOHN DOE</Link>
+              <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                 <span className="navbar-toggler-icon"></span>
               </button>
-              <div className="collapse navbar-collapse col-md-8" id="navbarNavAltMarkup">
-                <div className="navbar-nav">
-                  <Link className="nav-link" to="/">Home</Link>
-                  <Link className="nav-link" to="/services">Services</Link>
-                  <Link className="nav-link" to="/portfolio">Portfolio</Link>
-                  <Link className="nav-link" to="/contact">Contact</Link>
-                  <Link className="nav-link" to="/mentions">Mentions Légales</Link>
-                </div>
+              <div className="collapse navbar-collapse col-md-8" id="navbarNav">
+                <ul className="navbar-nav justify-content-end">
+                  <Link className="nav-link" to="/">HOME</Link>
+                  <Link className="nav-link" to="/services">SERVICES</Link>
+                  <Link className="nav-link" to="/portfolio">PORTFOLIO</Link>
+                  <Link className="nav-link" to="/contact">CONTACT</Link>
+                  <Link className="nav-link" to="/mentions">MENTIONS LÉGALES</Link>
+                </ul>
               </div>
             </div>
           </nav>
@@ -54,11 +54,11 @@ class App extends React.Component {
           <Route path="/mentions" element={<Mentions />}></Route>
         </Routes>
         <footer>
-          <nav className="navbar navbar-expand-lg bg-body-tertiary row">
-            <div className="col-md-4">
+          <nav className="navbar navbar-expand-lg bg-body-tertiary row align-items-start" data-bs-theme="dark">
+            <div className="col-md-4 ps-5">
               <h4>John Doe</h4>
               <address>
-                <p>40 rue Laure Diebol</p>
+                <p>40 rue Laure Diebold</p>
                 <p>69009 Lyon, France</p>
                 <p><Link to="tel:1020304050">10 20 30 40 50</Link></p>
                 <p><Link to="mailto:john.doe@gmail.com">john.doe@gmail.com</Link></p>
@@ -67,7 +67,7 @@ class App extends React.Component {
                 <Link data-mdb-ripple-init className="btn btn-link btn-floating btn-lg text-body m-1" to="#!!!" role="button" data-mdb-ripple-color="dark"><i className="bi bi-linkedin"></i></Link>
               </address>
             </div>
-            <div className="col-md-4">
+            <div className="col-md-4 ps-5">
               <h4>Liens utiles</h4>
               <ul className="nav flex-column">
                 <li className="nav-item">
@@ -87,7 +87,7 @@ class App extends React.Component {
                 </li>
               </ul>
             </div>
-            <div className="col-md-4">
+            <div className="col-md-4 ps-5">
               <h4>Mes dernières réalisations</h4>
               <ul className="nav flex-column">
                 <li className="nav-item">

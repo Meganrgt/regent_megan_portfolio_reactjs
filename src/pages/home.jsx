@@ -13,7 +13,7 @@ const Home = () => {
         <Container>
                 <ContainerColumn>
                     <H2Title title="A propos" />
-                    <img src={JohnDoeImage} alt="Jonh Doe about" />
+                    <img src={JohnDoeImage} alt="Jonh Doe about" className="object-fit-contain" width="100%"/>
                     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Option, necessitatibus consecutor tempore perferendis nostum, ex delectus reiciendis impedit aut iure enim placeal? Natus neque at?</p>
                     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Option, necessitatibus consecutor tempore perferendis nostum, ex delectus reiciendis impedit aut iure enim placeal? Natus neque at?</p>
                     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Option, necessitatibus consecutor tempore perferendis nostum, ex delectus reiciendis impedit aut iure enim placeal? Natus neque at?</p>

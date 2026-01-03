@@ -1,6 +1,6 @@
 const ContainerColumn = ({children}) => {
     return (
-        <><div className="col-6">
+        <><div className="col-sm-6">
             {children}
             </div></>
     );
