@@ -1,8 +1,8 @@
 const AccordionContainer = ({children}) => {
     return (
-        <><div className="accordion">
+        <div className="accordion">
             {children}
-            </div></>
+        </div>
     );
 }
 
