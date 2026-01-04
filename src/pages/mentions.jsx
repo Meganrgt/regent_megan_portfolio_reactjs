@@ -1,13 +1,13 @@
 import { Link } from "react-router-dom";
 import Accordion from "../components/accordion";
 import AccordionContainer from "../components/accordion-container";
-import H1Title from "../components/page-title";
+import PageTitle from "../components/page-title";
 import ContactDetails from "../components/contact-details";
 
 const Mentions = () => {
     return (
         <div>
-            <H1Title title="Mentions légales"/>
+            <PageTitle title="Mentions légales"/>
             <div className="container">
                 <AccordionContainer>
                     <Accordion accordionTitle="Editeur du site" accordionBodyTitle="John Doe" target="collapseOne">

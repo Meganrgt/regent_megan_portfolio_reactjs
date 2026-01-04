@@ -1,4 +1,4 @@
-const Card = (props) => {
+const PortfolioCard = (props) => {
     return (
         <div className="col-sm-4">
             <div className="card text-center">
@@ -6,7 +6,7 @@ const Card = (props) => {
                 <div class="card-body">
                     <h5 className="card-title">{props.cardTitle}</h5>
                     <p className="card-text">{props.cardText}</p>
-                    <a href="#" class="btn btn-primary">Voir le site</a>
+                    <a href="#!" class="btn btn-primary">Voir le site</a>
                 </div>
                 <div className="card-footer">
                     {props.cardFooter}
@@ -16,4 +16,4 @@ const Card = (props) => {
     );
 }
 
-export default Card;
+export default PortfolioCard;

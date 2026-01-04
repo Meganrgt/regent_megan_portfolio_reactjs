@@ -1,10 +1,10 @@
-const H2Title = (props) => {
+const H3Title = (props) => {
     return (
         <>
-        <h2 className="mt-3">{props.title}</h2>
-        <hr className="text-primary hrtitle"></hr>
+            <h3 className="mt-3">{props.title}</h3>
+            <hr className="text-primary hrtitle"></hr>
         </>
     );
 }
 
-export default H2Title;
+export default H3Title;
