@@ -5,8 +5,7 @@ import Portfolio from './pages/portfolio';
 import Services from './pages/services';
 import Contact from './pages/contact';
 import Mentions from "./pages/mentions";
-import JohnDoeProfile from "../src/assets/images/anonym.png";
-import ContactDetails from "./components/contact-details";
+import Modale from "../src/components/modale"
 
 class App extends React.Component {
   render() {
@@ -15,54 +14,23 @@ class App extends React.Component {
         <header>
           <nav className="navbar navbar-expand-md bg-body-tertiary " data-bs-theme="dark">
             <div className="container-fluid row">
-              <Link className="col-md-4" data-bs-toggle="modal" data-bs-target="#ModaleProfil">JOHN DOE</Link>
+              <Link className="col-md-4 navbar-brand" data-bs-toggle="modal" data-bs-target="#ModaleProfil">JOHN DOE</Link>
               <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                 <span className="navbar-toggler-icon"></span>
               </button>
               <div className="collapse navbar-collapse col-md-8" id="navbarNav">
-                <ul className="navbar-nav justify-content-end">
-                  <Link className="nav-link" to="/">HOME</Link>
-                  <Link className="nav-link" to="/services">SERVICES</Link>
-                  <Link className="nav-link" to="/portfolio">PORTFOLIO</Link>
-                  <Link className="nav-link" to="/contact">CONTACT</Link>
-                  <Link className="nav-link" to="/mentions">MENTIONS LÉGALES</Link>
+                <ul className="navbar-nav justify-content-end nav-underline nav-bold">
+                  <Link className="menu nav-link text-uppercase" to="/">Home</Link>
+                  <Link className="menu nav-link text-uppercase" to="/services">Services</Link>
+                  <Link className="menu nav-link text-uppercase" to="/portfolio">Portfolio</Link>
+                  <Link className="menu nav-link text-uppercase" to="/contact">Contact</Link>
+                  <Link className="menu nav-link text-uppercase" to="/mentions">Mentions Légales</Link>
                 </ul>
               </div>
             </div>
           </nav>
         </header>
-        <div className="modal fade modal-lg" id="ModaleProfil" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true" data-bs-theme="dark">
-          <div className="modal-dialog">
-            <div className="modal-content">
-              <div className="modal-header">
-                <h1 className="modal-title fs-5" id="exampleModalLabel">Mon profil GitHub</h1>
-                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-              </div>
-              <div className="modal-body row">
-                  <div className="col-sm-6">
-                    <img src={JohnDoeProfile} alt="Jonh Doe about" className="object-fit-contain" width="100%"/>
-                  </div>
-                  <div className="col-sm-6">
-                    <p><i class="bi bi-person"></i><a href="https://github.com/Meganrgt" > John Doe</a></p>
-                    <hr></hr>
-                    <ContactDetails icon="bi bi-geo-alt" details=""/>
-                    <hr></hr>
-                    <ContactDetails icon="bi bi-card-text" details=" As we all know, John Doe's identity is
-                    unknown. just wanted to contribute without being know"/>
-                    <hr></hr>
-                    <ContactDetails icon="bi bi-box" details=" Repositories : 1"/>
-                    <hr></hr>
-                    <ContactDetails icon="bi bi-people" details=" Followers : 16"/>
-                    <hr></hr>
-                    <ContactDetails icon="bi bi-people" details=" Following : 0"/>
-                  </div>
-              </div>
-              <div className="modal-footer">
-                <button type="button" className="btn btn-secondary" data-bs-dismiss="modal">Fermer</button>
-              </div>
-            </div>
-          </div>
-        </div>
+        <Modale />
         <Routes>
           <Route path="/" element={<Home />}></Route>
           <Route path="/services" element={<Services />}></Route>
@@ -79,9 +47,9 @@ class App extends React.Component {
                 <p>69009 Lyon, France</p>
                 <p><Link to="tel:1020304050">10 20 30 40 50</Link></p>
                 <p><Link to="mailto:john.doe@gmail.com">john.doe@gmail.com</Link></p>
-                <Link data-mdb-ripple-init className="btn btn-link btn-floating btn-lg text-body m-1" to="#!" role="button" data-mdb-ripple-color="dark"><i className="bi bi-github"></i></Link>
-                <Link data-mdb-ripple-init className="btn btn-link btn-floating btn-lg text-body m-1" to="#!!" role="button" data-mdb-ripple-color="dark"><i className="bi bi-twitter"></i></Link>
-                <Link data-mdb-ripple-init className="btn btn-link btn-floating btn-lg text-body m-1" to="#!!!" role="button" data-mdb-ripple-color="dark"><i className="bi bi-linkedin"></i></Link>
+                <Link target="_blank" nofollow data-mdb-ripple-init className="btn btn-link btn-floating btn-lg text-body m-1" to="https://github.com/github-john-doe" role="button" data-mdb-ripple-color="dark"><i className="bi bi-github social"></i></Link>
+                <Link target="_blank" nofollow data-mdb-ripple-init className="btn btn-link btn-floating btn-lg text-body m-1" to="https://github.com/github-john-doe" role="button" data-mdb-ripple-color="dark"><i className="bi bi-twitter social"></i></Link>
+                <Link target="_blank" nofollow data-mdb-ripple-init className="btn btn-link btn-floating btn-lg text-body m-1" to="https://github.com/github-john-doe" role="button" data-mdb-ripple-color="dark"><i className="bi bi-linkedin social"></i></Link>
               </address>
             </div>
             <div className="col-md-4 ps-5">
@@ -108,22 +76,22 @@ class App extends React.Component {
               <h4>Mes dernières réalisations</h4>
               <ul className="nav flex-column">
                 <li className="nav-item">
-                  <Link className="nav-link" to="#">Fresh Food</Link>
+                  <Link className="nav-link" to="/portfolio">Fresh Food</Link>
                 </li>
                 <li class="nav-item">
-                  <Link className="nav-link" to="#">Restaurant Akira</Link>
+                  <Link className="nav-link" to="/portfolio">Restaurant Akira</Link>
                 </li>
                 <li class="nav-item">
-                  <Link className="nav-link" to="#">Espace bien-être</Link>
+                  <Link className="nav-link" to="/portfolio">Espace bien-être</Link>
                 </li>
                 <li class="nav-item">
-                  <Link className="nav-link" to="#">SEO</Link>
+                  <Link className="nav-link" to="/portfolio">SEO</Link>
                 </li>
                 <li class="nav-item">
-                  <Link className="nav-link" to="#">Création d'une API</Link>
+                  <Link className="nav-link" to="/portfolio">Création d'une API</Link>
                 </li>
                 <li class="nav-item">
-                  <Link className="nav-link" to="#">Maquette d'une site</Link>
+                  <Link className="nav-link" to="/portfolio">Maquette d'une site</Link>
                 </li>
               </ul>
             </div>
